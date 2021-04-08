@@ -1,0 +1,39 @@
+html,
+body {
+  background-color:#4c061e;
+  margin: 0;
+  padding: 25px 0;
+}
+
+h1 {
+  font-size: 40px;
+  font-weight: bold;
+  color:#52b5a7;
+}
+main {
+  width: 400px;
+  padding: 10px;
+  background: white;
+  margin: 0 auto;
+  box-sizing: border-box;
+  display: block;
+}
+
+input[type='number'] {
+  width: 80px;
+  font-size: 20px;
+  box-sizing: border-box;
+}
+
+input[type='submit'] {
+  width: 30px;
+}
+
+select {
+  font-size: 15px;
+}
+
+option {
+  width: 30px;
+  font-size: 15px;
+}

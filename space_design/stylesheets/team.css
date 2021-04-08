@@ -1,0 +1,116 @@
+@import url("whitespace-reset.css");
+@import url("home.css");
+
+
+
+/* main */
+main {
+  background-color: #ffffff;
+  padding-top: 70px;
+  padding-bottom: 50px;
+}
+
+h2 {
+  font-size: 36px;
+  font-weight: bold;
+}
+
+h2::before,
+h2::after {
+  content: "\2022";
+  color:#2f2840;
+  font-size: 24px;
+  padding: 0 26px;
+  vertical-align: 5px;
+}
+
+main p {
+  padding: 0 234px;
+}
+
+main ul {
+  display: flex;
+  justify-content: space-around;
+  padding: 125px 228px 0 228px;
+  
+}
+
+main li {
+  width: 140px;
+}
+
+main li img {
+  padding-bottom: 25px;
+}
+
+main li a{
+  width: 100%;
+  vertical-align: center;
+  text-decoration: none;
+  color: #3e59b2;
+  font-size: 24px;
+}
+
+#modal-overlay {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 2;
+  background: rgba(0,0,0, .3);
+}
+
+#modal {
+  position: absolute;
+  left: 50%;
+  width: 400px;
+  margin-left: -225px;
+  z-index: 3;
+  padding: 100px 50px;
+  background: #ffffff;
+  text-align: left;
+  transition: visibility 1s, opacity 0.5s;
+}
+
+
+.hide {
+  visibility: hidden;
+  opacity: 0;
+}
+
+.show {
+  visibility: visible;
+  opacity: 1;
+}
+
+#modal a.close {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  width: 30px;
+  height: 30px;
+  text-align: left;
+  z-index: 1;
+  text-indent: -80px;
+  overflow: hidden;
+  background: transparent url("../images/icon_close.png") 0 0 no-repeat;
+}
+
+#modal h3 {
+  display: inline-block;
+  vertical-align: middle;
+  font-size: 30px;
+}
+
+#modal img {
+  display: inline-block;
+  width: 80px;
+  margin-right: 30px;
+  vertical-align: middle;
+}
+
+#modal p {
+  padding: 10px;
+  font-size: 20px;
+}

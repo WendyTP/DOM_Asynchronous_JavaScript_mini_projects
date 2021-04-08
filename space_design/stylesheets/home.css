@@ -1,0 +1,134 @@
+@import url("whitespace-reset.css");
+
+body {
+  
+  font: normal 20px "Nunito Sans", sans-serif;
+  color: #45494d;
+  text-align: center;
+  background-color: gray;
+
+}
+
+header, main, footer {
+  margin: 0 auto;
+  width: 1200px;
+}
+
+/* header */
+
+header {
+  background-color: #2f2840;
+  background-image: url("../images/bg_body.gif");
+  background-repeat: repeat ;
+}
+header h1 {
+  padding: 130px 0 120px 0;
+}
+
+header ul {
+  display: flex;
+  justify-content: center;
+  padding-bottom: 50px; 
+}
+
+header li {
+  display: inline-block;
+  padding: 0 37px;
+}
+
+header  a {
+  font-size: 26px;
+  text-decoration: none;
+  width: 100%;
+  color: #cacaca;
+  
+}
+
+header a.active {
+  color : #6db9ff;
+  font-weight: bold;
+}
+
+
+
+/* main */
+main {
+  background-color: #ffffff;
+  padding-top: 70px;
+  padding-bottom: 50px;
+}
+
+article {
+  width: 800px;
+  padding: 36px 0;
+  margin: 0 auto;
+}
+
+
+h2 {
+  font-size: 36px;
+  font-weight: bold;
+  margin-bottom: 40px;
+}
+
+h2::before,
+h2::after {
+  content: "\2022";
+  color:#2f2840;
+  font-size: 24px;
+  padding: 0 26px;
+  vertical-align: 5px;
+}
+
+h3 {
+  font-size: 24px;
+  font-weight: 900;
+  color: #3e59b2;
+  margin-bottom: 30px;
+}
+
+
+/* footer */
+
+footer {
+  padding-top: 86px;
+  padding-bottom: 75px;
+  background-color: #e7e7e7;
+}
+
+footer p {
+  color: #b1b1b1;
+  padding: 0 322px;
+}
+
+footer ul {
+  display: flex;
+  justify-content: space-between;
+  padding: 40px 322px 0 322px;
+}
+
+footer li a {
+  background:
+    transparent
+    url("../images/icons_social-media.png")
+    0 0 no-repeat;
+    height: 46px;
+    width: 46px;
+    display: block;
+}
+
+footer li a.twitter {
+  background-position: 0 0px;
+}
+
+footer li a.facebook {
+  background-position: 0 -46px;
+}
+
+footer li a.email {
+  background-position: 0 -92px;
+}
+
+footer li a.instagram {
+  background-position: 0 -138px;
+}
