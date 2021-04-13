@@ -35,9 +35,8 @@ document.addEventListener('DOMContentLoaded', event => {
 
 
   let randomWord = function() {
-    let words = []//['apple', 'orange', 'strawberry', 'raspberry', 'lemon'];
+    let words = ['apple', 'orange', 'strawberry', 'raspberry', 'lemon'];
     
-  
     return function() {
       function getRandomIdx(wordsCount) {
         return Math.floor(Math.random() * wordsCount);
@@ -57,22 +56,36 @@ document.addEventListener('DOMContentLoaded', event => {
   
   class Game {
     constructor() {
+      this.incorrectGuesses = 0;
+      this.gueesedLetters = [];
+      this.allowedWrongGuesses = 6;
+
       this.word = randomWord();
       if (!this.word) {
         message.textContent = "Sorry, I've run out of words";
         return this;
       }
-      this.incorrectGuesses = 0;
-      this.gueesedLetters = [];
-      this.allowedWrongGuesses = 6;
+      
+      this.init();
     }
 
     createBlanks() {
-      //
+      let currentSpans = document.querySelectorAll('span');
+
+      currentSpans.forEach(span => {
+        span.parentNode.removeChild(span);
+      });
+      
+      for (let i = 0; i < this.word.length; i += 1) {
+        wordDiv.appendChild(document.createElement('span'));
+      }
     }
+
+    init() {
+      this.createBlanks();
+    }
+  };
   
-  }
-  
-  let newGame = new Game();
-})
+  new Game();
+});
 
