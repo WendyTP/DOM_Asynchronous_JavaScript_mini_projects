@@ -1,0 +1,98 @@
+body {
+  background-color:lightgray;
+}
+
+body.win {
+  background-color: cadetblue;
+  animation: win 3s;
+
+}
+
+body.lose {
+  background-color: salmon;
+  animation: lose 3s;
+
+}
+
+@keyframes win {
+  0% {
+    background-color:lightgray;
+  }
+  100% {
+    background-color: cadetblue;
+  }
+}
+
+@keyframes lose {
+  0% {
+    background-color:lightgray;
+  }
+  100% {
+    background-color: salmon;
+  }
+}
+
+main {
+  width: 800px;
+  padding: 20px;
+  margin: 0 auto;
+  background-color:#ffffff;
+}
+
+#tree {
+  position: relative;
+  width: 678px;
+  height: 517px;
+  background: url("../images/tree.png") 0 0 no-repeat;  
+}
+
+#apples {
+position: absolute;
+left: 170px;
+top: 20;
+z-index: 1;
+width: 374px;
+height: 322px;
+background: url("../images/apples.png") 0 0 no-repeat;
+}
+
+#apples.guess_1 { background-position: 0 -322px;}
+#apples.guess_2 { background-position: 0 -644px;}
+#apples.guess_3 { background-position: 0 -966px;}
+#apples.guess_4 { background-position: 0 -1288px;}
+#apples.guess_5 { background-position: 0 -1610px;}
+#apples.guess_6 { display: none;}
+
+#spaces,
+#guesses {
+  padding-bottom: 40px;
+}
+
+p {
+  padding-bottom: 20px;
+  font-size: 20px;
+}
+
+p:empty {
+  display: none;
+}
+
+span {
+  display: inline-block;
+  width: 30px;
+  height: 35px;
+  margin-right: 10px;
+  font-size: 28px;
+  text-transform: uppercase;
+  text-align: center;
+  vertical-align:bottom;
+  border-bottom: 3px solid #333333;
+}
+
+h2 {
+  display: inline-block;
+  width: 100px;
+  margin-bottom: 0;
+vertical-align: middle;
+  
+}
