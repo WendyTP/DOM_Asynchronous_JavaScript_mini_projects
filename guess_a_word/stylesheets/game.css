@@ -96,3 +96,11 @@ h2 {
 vertical-align: middle;
   
 }
+
+#replay {
+  display: none;
+}
+
+#replay.visible{
+  display: inline;
+}
